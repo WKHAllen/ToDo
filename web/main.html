@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <script src="/eel.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="alert alert-primary main-title" role="alert">
+            <h1 class="centered-text">TODO</h1>
+        </div>
+        <div class="container">
+            <input type="text" class="form-control" id="item" placeholder="Item name" onkeydown="onEnter()">
+            <button class="btn btn-primary main-button" onclick="addItem()">Add item</button>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col" class="small-col">Done</th>
+                    <th scope="col" class="large-col">Item</th>
+                </tr>
+            </thead>
+            <tbody id="itemtable"></tbody>
+        </table>
+    </body>
+</html>
