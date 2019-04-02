@@ -16,8 +16,8 @@ def loadList():
 def saveList():
     data = list(theList.values())
     splitPath = os.path.split(listFile)[0]
-    if splitPath != "":
-        os.makedirs(splitPath, exist_ok=True)
+    if splitPath != "" and not os.path.exists(splitPath):
+        os.makedirs(splitPath)
     with open(listFile, "wb") as f:
         pickle.dump(data, f)
 
